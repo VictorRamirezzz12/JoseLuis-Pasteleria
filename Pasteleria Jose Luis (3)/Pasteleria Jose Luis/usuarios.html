@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería José Luis - Gestión de Usuarios</title>
+    <link rel="stylesheet" href="assets/css/usuarios.css">
+</head>
+<body>
+    <div class="usuarios-container">
+        <div class="header-section">
+            <div class="header-left">
+                <h1 class="page-title">Pastelería José Luis - Gestión de Usuarios</h1>
+            </div>
+            <div class="header-right">
+                <div class="logo">
+                    <img src="img/LOGO (2).png" alt="José Luis Pastelería" class="logo-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="left-section">
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="idUsuario">ID Usuario:</label>
+                        <input type="text" id="idUsuario" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Contraseña:</label>
+                        <input type="password" id="password" placeholder="" minlength="8" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rol:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="radio" name="rol" value="Administrador" id="rolAdmin">
+                                <span>Administrador</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" name="rol" value="Vendedor" id="rolVendedor">
+                                <span>Vendedor</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button class="action-btn add-btn" id="registrarBtn">Registrar</button>
+                        <button class="action-btn modify-btn" id="modificarBtn">Modificar</button>
+                        <button class="action-btn delete-btn" id="eliminarBtn">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="table-section">
+                    <table class="usuarios-table" id="usuariosTable">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nombre</th>
+                                <th>Rol</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usuariosTableBody">
+                            <!-- Se llenará dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-btn" id="backBtn">Volver al Menú</button>
+
+    <script src="controllers/usuariosController.js"></script>
+</body>
+</html>

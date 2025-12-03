@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería José Luis - Stock de Productos</title>
+    <link rel="stylesheet" href="assets/css/stock.css">
+</head>
+<body>
+    <div class="stock-container">
+        <div class="header-section">
+            <div class="header-left">
+                <h1 class="page-title">Pastelería José Luis - Stock de Productos</h1>
+            </div>
+            <div class="header-right">
+                <div class="logo">
+                    <img src="img/LOGO (2).png" alt="José Luis Pastelería" class="logo-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="form-section">
+                <h2 class="section-title">Gestión de Stock</h2>
+                <form class="stock-form" id="stockForm">
+                    <div class="form-group">
+                        <label for="nombreProducto">Producto:</label>
+                        <input type="text" id="nombreProducto" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="categoria">Categoría:</label>
+                        <select id="categoria" required>
+                                <option value="">Seleccione categoría</option>
+                            </select>
+                        <div id="nuevaCategoriaForm" style="display: none; margin-top: 10px; padding: 10px; background: #f5f5f5; border-radius: 4px;">
+                            <input type="text" id="nuevaCategoriaNombre" placeholder="Nombre de la nueva categoría" style="width: 100%; padding: 8px; margin-bottom: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                            <div style="display: flex; gap: 5px;">
+                                <button type="button" id="guardarCategoriaBtn" style="flex: 1; padding: 8px; background: #2196F3; color: white; border: none; border-radius: 4px; cursor: pointer;">Guardar</button>
+                                <button type="button" id="cancelarCategoriaBtn" style="flex: 1; padding: 8px; background: #f44336; color: white; border: none; border-radius: 4px; cursor: pointer;">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="cantidad">Cantidad:</label>
+                        <input type="number" id="cantidad" placeholder="" min="0" step="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio" placeholder="" min="0" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="unidad">Unidad:</label>
+                        <select id="unidad" required>
+                            <option value="u">Unidades (u)</option>
+                            <option value="kg">Kilogramos (kg)</option>
+                            <option value="g">Gramos (g)</option>
+                            <option value="l">Litros (l)</option>
+                            <option value="ml">Mililitros (ml)</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="display: none;">
+                        <label for="idProducto">ID Producto:</label>
+                        <input type="text" id="idProducto" placeholder="" readonly>
+                    </div>
+                    <div class="button-group">
+                        <button type="button" class="action-btn add-btn" id="agregarBtn">Agregar Producto</button>
+                        <button type="button" class="action-btn modify-btn" id="modificarBtn">Modificar Producto</button>
+                        <button type="button" class="action-btn delete-btn" id="eliminarBtn">Eliminar Producto</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="table-section">
+                <h2 class="section-title">Inventario Actual</h2>
+                <table class="stock-table" id="stockTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="stockTableBody">
+                        <!-- Se llenará dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-btn" id="backBtn">Volver al Menú</button>
+    <script src="controllers/stockController.js"></script>
+</body>
+</html>

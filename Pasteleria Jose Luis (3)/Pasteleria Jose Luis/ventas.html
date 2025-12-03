@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería José Luis - Registro de Ventas</title>
+    <link rel="stylesheet" href="assets/css/ventas.css">
+</head>
+<body>
+    <div class="ventas-container">
+        <div class="header-section">
+            <div class="header-left">
+                <h1 class="page-title">Pastelería José Luis - Registro de Ventas</h1>
+            </div>
+            <div class="header-right">
+                <div class="logo">
+                    <img src="img/LOGO (2).png" alt="José Luis Pastelería" class="logo-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="left-section">
+                <div class="form-section">
+                    <div class="form-group">
+                        <label for="usuario">Usuario:</label>
+                        <input type="text" id="usuario" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cantidad">Cantidad:</label>
+                        <input type="number" id="cantidad" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="idProducto">ID Producto:</label>
+                        <input type="text" id="idProducto" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio" placeholder="" step="0.01">
+                    </div>
+
+                    <div class="button-group">
+                        <button class="action-btn add-btn" id="agregarBtn">Agregar Venta</button>
+                        <button class="action-btn delete-btn" id="eliminarBtn">Eliminar Venta</button>
+                        <button class="action-btn modify-btn" id="modificarBtn">Modificar venta</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="table-section">
+                    <table class="ventas-table" id="ventasTable">
+                        <thead>
+                            <tr>
+                                <th class="sortable">
+                                    Producto 
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 15l-6-6-6 6"/>
+                                    </svg>
+                                </th>
+                                <th class="sortable">
+                                    ID Producto
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </th>
+                                <th class="sortable">Cantidad</th>
+                                <th class="sortable">Precio</th>
+                                <th class="sortable">Usuario</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Torta tres leches</td>
+                                <td>44550</td>
+                                <td>3</td>
+                                <td>S/. 30</td>
+                                <td>Neyer</td>
+                            </tr>
+                            <tr>
+                                <td>Mini empanadas</td>
+                                <td>44560</td>
+                                <td>100</td>
+                                <td>S/. 100</td>
+                                <td>Luis</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-btn" id="backBtn">Volver al Menú</button>
+
+    <script src="controllers/ventasController.js"></script>
+</body>
+</html>
+

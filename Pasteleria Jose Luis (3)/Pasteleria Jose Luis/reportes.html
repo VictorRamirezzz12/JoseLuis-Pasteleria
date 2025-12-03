@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería José Luis - Reportes</title>
+    <link rel="stylesheet" href="assets/css/reportes.css">
+</head>
+<body>
+    <div class="reportes-container">
+        <div class="header-section">
+            <div class="header-left">
+                <h1 class="page-title">Pastelería José Luis - Reportes</h1>
+            </div>
+            <div class="header-right">
+                <div class="logo">
+                    <img src="img/LOGO (2).png" alt="José Luis Pastelería" class="logo-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="filters-section">
+                <div class="form-group">
+                    <label for="tipoReporte">Tipo de reporte:</label>
+                    <select id="tipoReporte" class="form-select">
+                        <option value="mensual">Informe mensual</option>
+                        <option value="diario">Informe diario</option>
+                        <option value="semanal">Informe semanal</option>
+                        <option value="anual">Informe anual</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Periodo:</label>
+                    <div class="date-range">
+                        <div class="date-input">
+                            <label for="fechaDesde">Desde:</label>
+                            <input type="date" id="fechaDesde" class="form-input">
+                        </div>
+                        <div class="date-input">
+                            <label for="fechaHasta">Hasta:</label>
+                            <input type="date" id="fechaHasta" class="form-input">
+                        </div>
+                    </div>
+                </div>
+
+                <button class="generate-btn" id="generarBtn">Generar Reporte</button>
+            </div>
+
+            <div class="table-section">
+                <table class="reportes-table" id="reportesTable">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Producto</th>
+                            <th>Cant.</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportesTableBody">
+                        <!-- Se llenará dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="export-section">
+                <button class="export-btn" id="exportarBtn">Exportar PDF</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-btn" id="backBtn">Volver al Menú</button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="controllers/reportesController.js"></script>
+</body>
+</html>

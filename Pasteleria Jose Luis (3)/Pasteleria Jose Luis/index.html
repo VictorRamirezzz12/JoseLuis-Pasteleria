@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería San Luis - Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="split-container">
+        <div class="left-section">
+            <div class="left-content">
+                <div class="logo-left">
+                    <img src="img/LOGO (2).png" alt="José Luis Pastelería" class="logo-image-left">
+                </div>
+                <h1 class="greeting">¡Hola, Amigo!</h1>
+                <p class="subtitle">Ingresa tus datos y accede al sistema de gestión de la pastelería.</p>
+            </div>
+        </div>
+        
+        <div class="right-section">
+    <div class="login-container">
+        <div class="login-header">
+            <div class="user-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </div>
+            <div class="company-title">
+                <h1>Pastelería San Luis</h1>
+            </div>
+        </div>
+        
+        <form class="login-form" id="loginForm">
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="remember-section">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Recordar sesión</label>
+            </div>
+            
+            <button type="submit" class="login-btn">INGRESAR</button>
+        </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="controllers/authController.js"></script>
+</body>
+</html>

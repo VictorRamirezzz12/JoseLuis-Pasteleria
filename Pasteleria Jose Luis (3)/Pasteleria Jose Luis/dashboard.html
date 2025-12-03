@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastelería San Luis - Dashboard</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="header">
+            <div class="header-left">
+                <h1 class="module-title">Modulo de opciones</h1>
+                <div class="user-name" id="userName">
+                    <svg class="user-icon-small" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2.5">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span>NombreUsuario</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="logo">
+                    <img src="img/LOGO (2).png" alt="José Luis Pastelería" class="logo-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="options-grid">
+                <div class="option-card" onclick="navigateTo('usuarios')">
+                    <div class="card-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Gestión de usuarios</h3>
+                    <button class="card-btn">Abrir</button>
+                </div>
+                
+                <div class="option-card" onclick="navigateTo('ventas')">
+                    <div class="card-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M9 11H5a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-4"></path>
+                            <path d="M9 11V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path>
+                            <path d="M13 7h4l2 2-2 2h-4l-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Registro de ventas</h3>
+                    <button class="card-btn">Abrir</button>
+                </div>
+                
+                <div class="option-card" onclick="navigateTo('reportes')">
+                    <div class="card-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M3 3v18h18"></path>
+                            <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Reporte de ventas</h3>
+                    <button class="card-btn">Abrir</button>
+                </div>
+                
+                <div class="option-card" onclick="navigateTo('stock')">
+                    <div class="card-icon">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                            <path d="M3 3h18v18H3zM9 9h6v6H9z"></path>
+                            <path d="M9 3v18M15 3v18M3 9h18M3 15h18"></path>
+                        </svg>
+                    </div>
+                    <h3 class="card-title">Stock de productos</h3>
+                    <button class="card-btn">Abrir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="controllers/dashboardController.js"></script>
+</body>
+</html>
